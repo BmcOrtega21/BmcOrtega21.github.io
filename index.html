@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PORTAFOLIO DIGITAL</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .item {
+            background: #f0f0f0;
+            padding: 12px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .contenido {
+            display: none;
+            padding: 10px;
+            margin-top: 5px;
+            background: #d9e7ff;
+            border-left: 3px solid #007bff;
+            border-radius: 4px;
+        }
+        h2 {
+            color: #1e3a8a;
+        }
+
+        .contenido{
+            background-color: white;
+        }
+
+        .item{
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: bold;}
+    </style>
+
+</head>
+
+<body>
+
+    
+    <h2>Bienvenido a mi Portafolio Digital</h2>
+
+    <div class="item" onclick="mostrar(this)">PRIMER TRIMESTRE</div>
+    <div class="contenido">
+        <div class="item" onclick="mostrar(this)">EHC-101 – Currículo Dominicano</div>
+        <div class="contenido">
+            Contenido del curso EHC-101 – Currículo Dominicano.
+            <h2>1. Descripción de la Asignatura</h2>
+                    <p>Descripción breve de la asignatura. Puedes modificar este texto según tu programa académico.</p>
+
+                    <h2>2. Experiencias Vividas</h2>
+                    <ul>
+                        <li>Participación en foros</li>
+                        <li>Clases sincrónicas</li>
+                        <li>Proyectos</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+
+                    <h2>3. Evidencias de Aprendizaje</h2>
+                    <p>Inserta aquí tus archivos, imágenes, PDFs, enlaces o capturas de pantalla.</p>
+                    <a href="Presentación Medios y Recursos Didácticos.pdf" target="_blank">Presentación Medios y Recursos Didácticos</a>
+
+
+                    <h2>4. Reflexión Personal</h2>
+                    <p>Reflexión personal sobre aprendizajes logrados, retos enfrentados y aplicaciones en tu práctica docente.</p>
+                </div>
+        </div>
+        <div class="menu-item" onclick="showSection('EHD101')">EHD-101 – Desarrollo Adolescente</div>
+    </div>
+
+    <div class="item" onclick="mostrar(this)">Segundo Trimestre</div>
+    <div class="contenido">
+        <div class="menu-item" onclick="showSection('EHD102')">EHD-102 – Proceso de E/A</div>
+        <div class="menu-item" onclick="showSection('EHD103')">EHD-103 – Evaluación</div>
+        <div class="menu-item" onclick="showSection('EHD104')">EHD-104 – Medios y Recursos</div>
+    </div>
+
+    <div class="item" onclick="mostrar(this)">Tercer Trimestre</div>
+    <div class="contenido">
+        <div class="menu-item" onclick="showSection('EHC102')">EHC-102 – Didáctica Especial I</div>
+        <div class="menu-item" onclick="showSection('EHD105')">EHD-105 – Ética Docente</div>
+        <div class="menu-item" onclick="showSection('EHD106')">EHD-106 – Psicología Educativa</div>
+    </div>
+
+    <div class="item" onclick="mostrar(this)">Cuarto Trimestre</div>
+    <div class="contenido">
+        <div class="menu-item" onclick="showSection('EHC103')">EHC-103 – Didáctica Especial II</div>
+        <div class="menu-item" onclick="showSection('EHD102P')">EHD-102P – Proyecto Pedagógico</div>
+        <div class="menu-item" onclick="showSection('EHD105S')">EHD-105S – Seminario</div>
+    </div>
+
+    <script>
+        function mostrar(elemento) {
+            let contenido = elemento.nextElementSibling;
+
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+            } else {
+                contenido.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
